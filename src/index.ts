@@ -1,3 +1,6 @@
+// 1.
+// https://github.com/Chayanonc/neversitup-backend/
+
 // 2.
 const shufflings = (text: string) => {
   if (text.length == 1) return [text];

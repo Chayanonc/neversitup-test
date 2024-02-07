@@ -1,5 +1,6 @@
 import { countSmile, findWhichIsOdd, shufflings } from "./index";
 
+// 2. test shufflings function
 describe("shufflings function", () => {
   it("should return all permutations of a string", () => {
     const input = "abc";
@@ -16,6 +17,7 @@ describe("shufflings function", () => {
   });
 });
 
+// 3. test findWhichIsOdd function
 describe("findWhichIsOdd function", () => {
   it("should return the odd number in an array with one odd number", () => {
     const numbers = [0, 1, 0, 1, 0];
@@ -39,16 +41,17 @@ describe("findWhichIsOdd function", () => {
   });
 });
 
+// 4. test countSmile function
 describe("countSmile function", () => {
   it("should return the count of valid smiles in an array", () => {
     const smiles = [":)", ";(", ";}", ":-D"];
-    const expectedOutput = 2; // 4 valid smiles: :) ;-) :D ;-D
+    const expectedOutput = 2;
     const result = countSmile(smiles);
     expect(result).toBe(expectedOutput);
   });
 
   it("should return 0 if there are no valid smiles in the array", () => {
-    const smiles = [';]', ':[', ';*', ':$', ';-D'];
+    const smiles = [";]", ":[", ";*", ":$", ";-D"];
     const expectedOutput = 1;
     const result = countSmile(smiles);
     expect(result).toBe(expectedOutput);
@@ -60,6 +63,4 @@ describe("countSmile function", () => {
     const result = countSmile(smiles);
     expect(result).toBe(expectedOutput);
   });
-
-  // Add more test cases as needed
 });
